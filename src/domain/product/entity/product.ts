@@ -16,22 +16,22 @@ export default class Product implements ProductInterface {
     return this._id;
   }
 
+  get name(): string {
+    return this._name;
+  }
+
+  get price(): number {
+    return this._price;
+  }
+
   changeName(name: string): void {
     this._name = name;
     this.validate();
   }
 
-  get name(): string {
-    return this._name;
-  }
-
   changePrice(price: number): void {
     this._price = price;
     this.validate();
-  }
-
-  get price(): number {
-    return this._price;
   }
 
   validate(): boolean {
